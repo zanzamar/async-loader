@@ -36,7 +36,7 @@ return {
 		insertElement( createScript( ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js' ), node );
 	},
 	script: function( src, node ) {
-		insertElement( createScript( src, node ) );
+		insertElement( createScript( src ), node );
 	},
 	stylesheet: function( href, node ) {
 		var link = document.createElement( "link" );

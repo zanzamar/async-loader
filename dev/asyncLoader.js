@@ -46,7 +46,7 @@ return {
 		].forEach( function( key ) {
 			window[ "google_" + key ] = settings[ key ];
 		});
-		insertElement( createScript( ('https:' == document.location.protocol ? 'https://' : 'http://') + 'www.googleadservices.com/pagead/conversion.js">' ), node );
+		insertElement( createScript( ('https:' == document.location.protocol ? 'https://' : 'http://') + 'www.googleadservices.com/pagead/conversion.js' ), node );
 	},
 	script: function( src, node ) {
 		insertElement( createScript( src ), node );

@@ -35,6 +35,19 @@ return {
 		_gaq.push(['_trackPageview']);
 		insertElement( createScript( ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js' ), node );
 	},
+	googleConversion: function( settings, node ) {
+		[
+			"conversion_id",
+			"conversion_language",
+			"conversion_format",
+			"conversion_color",
+			"conversion_label",
+			"remarketing_only"
+		].forEach( function( key ) {
+			window[ "google_" + key ] = settings[ key ];
+		});
+		insertElement( createScript( ('https:' == document.location.protocol ? 'https://' : 'http://') + 'www.googleadservices.com/pagead/conversion.js">' ), node );
+	},
 	script: function( src, node ) {
 		insertElement( createScript( src ), node );
 	},

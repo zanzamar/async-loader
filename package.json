@@ -1,6 +1,7 @@
 {
 	"name": "async-loader",
-	"version": "1.0.1",
+	"version": "1.0.2",
+	"main": "dist/source.min.js",
 	"devDependencies": {
 		"grunt": "~0.4.5",
 		"grunt-contrib-clean": "~0.5.0",
@@ -10,5 +11,8 @@
 	"peerDependencies": {
 		"bower": "*",
 		"grunt-cli": "*"
+	},
+	"browserify": {
+		"transform": "deamdify"
 	}
 }
